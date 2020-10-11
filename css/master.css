@@ -1,0 +1,63 @@
+section{
+  background-color: #0063b2ff;
+  width:40%;
+  border-radius: 20px;
+  color: white;
+}
+.spacer{
+  height: 30px;
+  width: auto;
+}
+h1{
+  margin-top: 200px;
+  font-size: 100px;
+  color: #0063b2ff;
+  font-weight: bold;
+  font-family: 'Arial Black';
+}
+body{
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'Segoe UI Light';
+  background-color: #9cc3d5ff;
+}
+input.userid{
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+  height: 30px;
+  width: 40%;
+}
+input.password{
+  text-align: center;
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 20px;
+  width: 40%;
+
+  font-size: 20px;
+}
+select{
+  font-family: 'Segoe UI Light';
+  text-align-last: center;
+  height: 50px;
+  width: 50%;
+  font-size: 20px;
+  border-radius: 20px;
+}
+input.continue{
+  color: white;
+  transition: 0.2s;
+  font-family: 'Segoe UI Light';
+  height: 40px;
+  margin-top: 15px;
+  width: 30%;
+  font-size: 15px;
+  border-radius: 20px;
+  background-color: transparent;
+  border-color: white;
+}
+input.continue:hover{
+  transition: 0.2s;
+  background-color: #9cc3d5ff;
+}
