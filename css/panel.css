@@ -37,6 +37,7 @@ section{
 }
 
 .button{
+  transition: 0.3s;
   display: inline-block;
   text-align: center;
   margin:30px;
@@ -45,6 +46,8 @@ section{
   border-radius: 20px;
 }
 .button:hover{
+  transition: 0.3s;
+
   border-color: white;
 }
 .spacer{
