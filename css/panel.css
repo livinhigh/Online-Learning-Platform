@@ -45,7 +45,11 @@ section{
   border: 2px solid black;
   border-radius: 20px;
 }
+img.button:hover{
+  width:100px;
+}
 .button:hover{
+  width: 300px;
   background-color: white;
   color: #0063b2ff;
   transition: 0.3s;
