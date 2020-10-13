@@ -46,6 +46,8 @@ section{
   border-radius: 20px;
 }
 .button:hover{
+  background-color: white;
+  color: #0063b2ff;
   transition: 0.3s;
 
   border-color: white;
