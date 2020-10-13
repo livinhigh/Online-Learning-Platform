@@ -1,0 +1,50 @@
+h1{
+  font-family: "Arial Black";
+}
+img.headerLogo{
+  width: 150px;
+}
+td.logo{
+  width: 7%;
+}
+table{
+  width: 93%;
+}
+td.welcome{
+  text-align:center;
+}
+body{
+  align-items: center;
+  text-transform: uppercase;
+  font-family: 'Segoe UI Light';
+  background-color: #9cc3d5ff;
+}
+section{
+  display: block;
+  margin-top: 100px;
+  background-color: #0063b2ff;
+  width:90%;
+  border-radius: 20px;
+  color: white;
+}
+
+.button{
+text-align: center;
+  height: 40px;
+  margin: 100px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+.button:hover{
+  border-color: white;
+}
+.spacer{
+  height: 30px;
+  width: auto;
+}
+.user{
+  font-size: 20px;
+  color: black;
+  text-align: right;
+}
