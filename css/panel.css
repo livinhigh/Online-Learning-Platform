@@ -13,6 +13,14 @@ table{
 td.welcome{
   text-align:center;
 }
+h4{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+img.button{
+  border-width: 0px;
+  width: 100px;
+}
 body{
   align-items: center;
   text-transform: uppercase;
@@ -20,7 +28,7 @@ body{
   background-color: #9cc3d5ff;
 }
 section{
-  display: block;
+
   margin-top: 100px;
   background-color: #0063b2ff;
   width:90%;
@@ -29,9 +37,9 @@ section{
 }
 
 .button{
-text-align: center;
-  height: 40px;
-  margin: 100px;
+  display: inline-block;
+  text-align: center;
+  margin:30px;
   width: 200px;
   border: 2px solid black;
   border-radius: 20px;
