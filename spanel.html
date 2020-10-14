@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="css/calender.css">
+
     <meta charset="utf-8">
     <title>Student Panel</title>
 
@@ -14,7 +16,10 @@
       </div>
   <a href="#home" class="active">Home</a>
 
-  <a href="#about">About</a>
+  <a href="#about">CLASS WALL</a>
+  <a href="#">ASSIGNMENTS</a>
+  <a href="#">ATTENDANCE</a>
+  <a href="#">TIMETABLE</a>
   <div class="user">
     <a href="index.html" onclick="">Logout</a>
 
@@ -30,11 +35,50 @@
       <tr>
         <td class="logo"><img class="headerLogo" src="logo/christ/logo.png" alt="logo of uni">
 </td>
-        <td class="welcome"><h1>HELLO IVAN JOSEPH THOMAS</h1><b>1860437</b></td>
+        <td class="welcome"><h1>HELLO IVAN JOSEPH THOMAS</h1><h2>1860437</h2> </td>
       </tr>
+      
     </table>
     <center>
+      <div class="left">
+        <h4 style="font-size:25px;font-weight:bold;">Subjects</h4>
+        <hr>
+        <div class="spacer">
+          <table>
+            <tr>
+              <td>Software Engineering</td>
+              <td><img class="lefticon" src="icons/next.png" alt=""> </td>
+            </tr>
 
+            <tr>
+              <td>Computer Oriented Numerical Analysis</td>
+              <td><img class="lefticon" src="icons/next.png" alt=""> </td>
+            </tr>
+            <tr>
+              <td>Internet and Web Programming</td>
+              <td><img class="lefticon" src="icons/next.png" alt=""> </td>
+            </tr>
+            <tr>
+              <td>Design and Analysis of Algortihms</td>
+              <td><img class="lefticon" src="icons/next.png" alt=""> </td>
+            </tr>
+            <tr>
+              <td>Formal Language and Automata Theory</td>
+              <td><img class="lefticon" src="icons/next.png" alt=""> </td>
+            </tr>
+            <tr>
+              <td>Internet of Things</td>
+              <td><img class="lefticon" src="icons/next.png" alt=""> </td>
+            </tr>
+            <tr>
+              <td>Honors</td>
+              <td><img class="lefticon" src="icons/next.png" alt=""> </td>
+            </tr>
+
+          </table>
+        </div>
+
+      </div>
     <div class="area">
       <div class="spacer"></div>
       <div class="button">
@@ -62,10 +106,8 @@
       <div class="spacer"></div>
     </div>
     <div class="right">
-      <div class="spacer">
 
-      </div>
-      <h4>Calendar</h4>
+      <h4 style="font-size:25px;font-weight:bold;">Calendar</h4>
       <div class="month">
   <ul>
     <li class="prev">&#10094;</li>
@@ -118,14 +160,24 @@
   <li>31</li>
 </ul>
 
-      <div class="spacer">
+<h4 style="font-size:25px;font-weight:bold;">TODAY</h4>
+<a class="calShort" href="#">
+  <hr>
+    <div class="spacer"></div>
+    <h4 style="font-size: 14px;font-family:Arial Black;">Formal Language and Automata Theory</h4>
+    <p>Asynchronous Activity by 21:00</p>
+    <div class="spacer"></div>
 
-      </div>
-      <h4>Nothing to do today!</h4>
-      <div class="spacer">
-
-      </div>
+</a>
+<a class="calShort" href="#">
+  <hr>
+    <div class="spacer"></div>
+    <h4 style="font-size: 14px;font-family:Arial Black;">Software Engineering</h4>
+    <p>CIA 3 Submission by 23:00</p>
+    <div class="spacer"></div>
+</a>
     </div>
+
   </center>
   </body>
 </html>
