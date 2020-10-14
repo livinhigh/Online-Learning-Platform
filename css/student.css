@@ -18,3 +18,20 @@ a.circleContine:hover{
   color: black;
   transition:0.2s;
  }
+.heading{
+  font-size: 30px;
+  font-weight: bold;
+}
+table.assignments{
+  font-size: 20px;
+}
+.subheading{
+  font-size: 20px;
+  font-weight: bold;
+}
+img.assignments{
+  width:30px;
+}
+.pending{
+  background-color: red;
+}
