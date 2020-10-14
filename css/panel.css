@@ -114,6 +114,17 @@ body{
   border-radius: 20px;
   color: white;
 }
+select{
+  font-family: 'Segoe UI Light';
+  text-align-last: center;
+  height: 50px;
+  width: 50%;
+  border-width: 2px;
+  border-color: white;
+  font-size: 20px;
+  background-color: transparent;
+  border-radius: 20px;
+}
 .left{
   display: inline-block;
   width: 20%;
