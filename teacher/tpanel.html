@@ -1,47 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/calender.css">
+    <link rel="stylesheet" href="tpanel.css">
+
+
+    <meta charset="utf-8">
     <title>Teacher Panel</title>
-    <link rel="stylesheet" href="calender.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
-    />
+
   </head>
   <body>
-    <div class="profile">
-      <center>
-        <img src="assets/profiledefault.jpg">
-        <br>
-        <h1>Jagathnath B</h1>
-      </center>
-    </div>
-    <div class="calender">
-    <div class="container">
-      <div class="calendar">
-        <div class="month">
-          <i class="fas fa-angle-left prev"></i>
-          <div class="date">
-            <h1></h1>
-            <p></p>
-          </div>
-          <i class="fas fa-angle-right next"></i>
-        </div>
-        <div class="weekdays">
-          <div>Sun</div>
-          <div>Mon</div>
-          <div>Tue</div>
-          <div>Wed</div>
-          <div>Thu</div>
-          <div>Fri</div>
-          <div>Sat</div>
-        </div>
-        <div class="days"></div>
+
+    <div class="topnav" id="myTopnav">
+      <div class="title">
+        CHRIST University Learning Platform
       </div>
-    </div>
+  <a href="#home" class="active">Home</a>
+  <a href="#">ASSIGNMENTS</a>
+  <a href="#">ATTENDANCE</a>
+  <a href="#">NOTIFICATIONS</a>
+  <div class="user">
+    <a href="index.html" onclick="">Logout</a>
+
   </div>
-    <script src="calender.js"></script>
+</div>
+<div class="spacer2">
+
+</div>
+
+
+
+    <table>
+      <tr>
+        <td class="logo"><img class="headerLogo" src="../logo/christ/logo.png" alt="logo of uni">
+</td>
+        <td class="welcome"<h2 style="text-align: justify; font-size: 35px">PROF. JAGATHNATH NAIR</h2><br>
+        <p style="font-size: 20px; text-align: justify";font-style="Segoe UI Light">Dept. of Computer Science and Engineering</p>
+      </tr>
+
+    </table>
+
+    <center>
+      <div class="left">
+        <h4 style="font-size:25px;font-weight:bold;">MENU</h4>
+        <hr>
+        <div class="spacer">
+          <table>
+            <tr>
+              <td>
+                <button class="dropbtn">ASSIGNMENTS</button>
+              </td>
+              <td>
+                <div class="dropdown">
+                  <img class="lefticon" src="../icons/next.png" alt="">
+                  <div class="dropdown-content">
+                    <a href="assignments/createassgnmt.html">CREATE</a>
+                    <a href="#">EDIT</a>
+                    <a href="#">DELETE</a>
+                  </td>
+            </tr>
+
+            <tr>
+              <td>
+                <button class="dropbtn">REVIEW</button>
+              </td>
+              <td><div class="dropdown">
+                <img class="lefticon" src="../icons/next.png" alt="">
+                <div class="dropdown-content">
+                  <a href="#">ASSIGNMENTS</a>
+                  <a href="#">STUDENTS</a>
+                 </td>
+            </tr>
+            <tr>
+              <td>
+                  <button class="dropbtn">LIBRARY</button>
+                </td>
+              <td>
+                <div class="dropdown">
+                  <img class="lefticon" src="../icons/next.png" alt="">
+                  <div class="dropdown-content">
+                    <a href="#">STUDY MATERIALS</a>
+                    <a href="#">COURSE PLAN</a>
+                  </td>
+            </tr>
+
+            <tr>
+              <td>
+                  <button class="dropbtn">EDIT CLASS</button>
+                </td>
+              <td>
+                <div class="dropdown">
+                  <img class="lefticon" src="../icons/next.png" alt="">
+                  <div class="dropdown-content">
+                    <a href="#">ADD STUDENT</a>
+                    <a href="#">ADD SECTION</a>
+                  </td>
+            </tr>
+
+          </table>
+        </div>
+
+      </div>
+    <div class="area">
+      <div class="spacer" style="font-size: 25px;"><b>NEWS AND UPDATES</b></div>
+      <a class="button" href="chooseSub.html">
+        <img class="button" src="../buttons/class.png" alt=""><h4>Pending Assignments</h4>
+      </a>
+      <a class="button">
+        <img class="button" src="../buttons/class.png" alt=""><h4>Attendance</h4>
+
+      </a><br>
+      <a class="button">
+        <img class="button" src="../buttons/class.png" alt=""><h4>Timetable</h4>
+
+      </a>
+      <a class="button"><img class="button" src="../buttons/class.png" alt=""><h4>Completed Assignments</h4>
+
+      </a>
+
+      <div class="spacer"></div>
+    </div>
+    <div class="right">
+
+      <h4 style="font-size:25px;font-weight:bold;">Calendar</h4>
+      <div class="month">
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>October<br><span style="font-size:18px">2020</span></li>
+  </ul>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+  <li><span class="active">10</span></li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li>14</li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li>25</li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li>31</li>
+</ul>
+
+<h4 style="font-size:25px;font-weight:bold;">UPCOMING EVENTS</h4>
+<a class="calShort" href="#">
+  <hr>
+    <div class="spacer"></div>
+    <h4 style="font-size: 14px;font-family:Arial Black;">TEACHER MONTHLY MEET</h4>
+    <p>30/10/2020</p>
+    <div class="spacer"></div>
+
+</a>
+
+    </div>
+
+  </center>
   </body>
 </html>
