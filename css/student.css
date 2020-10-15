@@ -37,6 +37,15 @@ table input.continue{
   color: black;
   width: 50%;
 }
+table.attendance th{
+  padding-bottom: 15px;
+  border-bottom:  2px solid black;
+}
+table.attendance td{
+  padding-bottom: 10px;
+    padding-top: 10px;
+  border-bottom:  2px solid black;
+}
 input.continue{
   color: white;
   transition: 0.2s;
