@@ -57,10 +57,17 @@ h2{
   background-color: #ddd;
   color: black;
 }
+a.left{
+  text-decoration: none;
+}
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
   background-color: #0063b2ff;
+  color: white;
+
+}
+.topnav a.first  {
   color: white;
   margin-left: 30%;
 }

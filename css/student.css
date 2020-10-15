@@ -9,6 +9,14 @@ a.circleContine{
   transition:0.2s;
 
 }
+.posttimestamp{
+  color: #7a9dc5;
+
+}
+p{
+  text-transform: none;
+
+}
 .area select{
   background-color: white;
   color: black;
@@ -24,6 +32,11 @@ a.circleContine:hover{
  pre{
    padding-left: 50px;
    text-align: left;
+ }
+ table.timetable td,table.timetable th{
+   font-size: 20px;
+   text-align: center;
+   padding-bottom: 20px;
  }
 .heading{
   font-size: 30px;
@@ -52,7 +65,8 @@ input.continue{
   font-family: 'Segoe UI Light';
   height: 40px;
   margin-top: 15px;
-  width: 30%;
+  padding-left: 30px;
+  padding-right: 30px;
   font-size: 15px;
   border-radius: 20px;
   background-color: transparent;
