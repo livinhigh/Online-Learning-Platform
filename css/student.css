@@ -18,12 +18,51 @@ a.circleContine:hover{
   color: black;
   transition:0.2s;
  }
+ .completed{
+
+ }
+ pre{
+   padding-left: 50px;
+   text-align: left;
+ }
 .heading{
   font-size: 30px;
   font-weight: bold;
 }
 table.assignments{
-  font-size: 20px;
+  font-size: 18px;
+}
+table input.continue{
+  background-color: white;
+  color: black;
+  width: 50%;
+}
+input.continue{
+  color: white;
+  transition: 0.2s;
+  font-family: 'Segoe UI Light';
+  height: 40px;
+  margin-top: 15px;
+  width: 30%;
+  font-size: 15px;
+  border-radius: 20px;
+  background-color: transparent;
+  border-color: white;
+}
+input.continue:hover{
+  transition: 0.2s;
+  background-color: #9cc3d5ff;
+}
+table.assignments td{
+  padding-bottom: 10px;
+}
+table.assignments tr{
+  transition: 0.2s;
+}
+table.assignments tr:hover{
+  background-color: white;
+  color: black;
+  transition: 0.2s;
 }
 .subheading{
   font-size: 20px;
