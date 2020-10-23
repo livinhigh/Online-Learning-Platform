@@ -28,11 +28,11 @@
        exit();
 
        }
-     $query = "select name from colleges";
+     $query = "select * from colleges";
      $result = $conn->query($query);
        while ($row = $result->fetch_assoc())
        {
-         echo '<option value=" '.$row['id'].' "> '.$row['name'].' </option>';
+         echo '<option value="'.$row['value'].'"> '.$row['name'].' </option>';
        }
     ?>
   </select>
