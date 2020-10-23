@@ -13,16 +13,23 @@
       </div>
       <h2>Choose your University</h2>
 <?php
-$conn = new mysqli('127.0.0.1', 'epiz_27033647', '5thsemiwp', 'epiz_27033647_olp');
 
- $query = "select name from colleges";
-$result = $mysqli -> query($query);
 ?>
 
 
 <form>
   <select>
      <?php
+     $conn = new mysqli('sql302.epizy.com', 'epiz_27033647', 'h0yFaudpMitWHn', 'epiz_27033647_olp');
+     if ($mysqli -> connect_errno) {
+
+       echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+
+       exit();
+
+       }
+     $query = "select name from colleges";
+     $result = $conn->query($query);
        while ($row = $result->fetch_assoc())
        {
          echo '<option value=" '.$row['id'].' "> '.$row['name'].' </option>';
