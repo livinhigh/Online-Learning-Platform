@@ -22,17 +22,47 @@
 <section style="padding-top:100px; color:white;">
   <h2>CLASS</h2>
   <center>
-  <select class="" name="">
-    <option value="christ">5BTCS-C</option>
-    <option value="christ">7BTCS-A</option>
-    <option value="christ">5BTCS-A</option>
-  </select>
+    <select class="" name="">
+    <?php
+    $conn = new mysqli('sql302.epizy.com', 'epiz_27033647', 'h0yFaudpMitWHn', 'epiz_27033647_olp');
+    if ($mysqli -> connect_errno) {
+
+      echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+
+      exit();
+
+      }
+    $query = "select * from classes";
+    $result = $conn->query($query);
+      while ($row = $result->fetch_assoc())
+      {
+        echo '<option id="sec" onclick="setClass()" value="'.$row['value'].'"> '.$row['section'].'  </option>';
+      }  
+
+  ?>
+  <script>
+    function setClass(){
+      var section_js = document.getElementById("sec").value;
+      localStorage.setItem("section", section_js)  
+    }
+  </script>
+
+</select>
   </center>
 
 <div class="area"></div>
   <br>
   <div class="heading">
-    <h2>5BTCS-C<h2>
+    <?php
+
+      $section = $_POST['section'];
+      $query = "SELECT * FROM  students WHERE section ='$section'";
+     $query_run = mysqli_query($link, $query);
+     $check_rest =mysqli_num_rows($query_run) > 0;
+    ?>
+
+  <h2><?php echo $section ?><h2>
+
   </div>
   <table class="timetable">
     <tr>
@@ -43,47 +73,26 @@
       <td><h4>C.G.P.A</h4></td>
     </tr>
     <tr>
+      <? if($check_rest)
+     {
+        while($row = mysqli_fetch_assoc( $query_run))
+        {
+
+    ?>
       <th></th>
-      <td>1860420</td>
-      <td>Ravi</td>
-      <td>186040_Ravi@gmail.com</td>
-      <td>3.4</td>
+      <td><?php .$row['REG_ID'] ?></td>
+      <td><?php .$row['NAME'] ?></td>
+      <td><?php .$row['EMAIL'] ?></td>
+      <td><?php .$row['CGPA'] ?></td>
     </tr>
-    <tr>
-      <th></th>
-      <td>1860422</td>
-      <td>Aswin</td>
-      <td>186022_Aswin@gmail.com</td>
-      <td>3.7</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td>1860423</td>
-      <td>Rohan</td>
-      <td>1860423_Rohan@gmail.com</td>
-      <td>4.5</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td>1860424</td>
-      <td>Sachin</td>
-      <td>186044_Sachin@gmail.com</td>
-      <td>3.6</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td>1860425</td>
-      <td>Rahul</td>
-      <td>186025_Sachin@gmail.com</td>
-      <td>3.2</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td>1860426</td>
-      <td>Sundar</td>
-      <td>186046_Sundar@gmail.com</td>
-      <td>4.1</td>
-    </tr>
+  <?php 
+        }
+      }
+      else
+{
+ echo "No record found";
+}
+?>
   </table><br>
   <form class="" action="../tpanel.html" method="post">
     <input type="submit" class="continue" value="Go Back">
