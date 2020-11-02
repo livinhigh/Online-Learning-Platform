@@ -19,7 +19,7 @@
       <a href="attendance.html">ATTENDANCE</a>
       <a href="timetable.html">TIMETABLE</a>
   <div class="user">
-  <a href="../index.html" onclick="">Logout</a>
+  <a href="../logout.php" onclick="">Logout</a>
 
   </div>
 </div>
@@ -33,7 +33,10 @@
       <tr>
         <td class="logo"><img class="headerLogo" src="../logo/christ/logo.png" alt="logo of uni">
 </td>
-        <td class="welcome"><h1>HELLO IVAN JOSEPH THOMAS</h1><h2>1860437</h2> </td>
+<?php
+session_start();
+echo "<td class=\"welcome\"><h1>HELLO ".$_SESSION['name']."</h1><h2>1860437</h2> </td>";
+?>
       </tr>
 
     </table>
