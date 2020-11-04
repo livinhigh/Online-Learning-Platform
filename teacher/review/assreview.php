@@ -29,6 +29,32 @@
 </div>
 </div>
 <div class="spacer2">
+  
+  <?php
+   
+   /* Attempt MySQL server connection. Assuming you are running MySQL
+   server with default setting (user 'root' with no password) */
+   $link = mysqli_connect('sql302.epizy.com', 'epiz_27033647', 'h0yFaudpMitWHn', 'epiz_27033647_olp');
+    
+   // Check connection
+   if($link === false){
+       die("ERROR: Could not connect. " . mysqli_connect_error());
+   }
+   
+
+    $query = "SELECT * FROM submission";
+    $query_run = mysqli_query($link, $query);
+    $check_rest =mysqli_num_rows($query_run) > 0;
+   
+    if($check_rest)
+    {
+       while($row = mysqli_fetch_assoc( $query_run))
+       {  $reg_id = .$row["Reg_id"];
+          $status = .$row["status"];
+          $upload = .$row["upload"];
+          $time = .$row["time"];
+
+?>
 
 </div>
 <div class="area">
@@ -46,46 +72,18 @@
     </tr>
     <tr>
       <th></th>
-      <td>1860420</td>
-      <td>Submitted</td>
-      <td>186040.txt</td>
-      <td>22:40 P.M</td>
+      <td><?php echo $reg_id;?></td>
+      <td><?php echo $status;?></td>
+      <td><?php echo $upload;?></td>
+      <td><?php echo $time;?></td>
     </tr>
-    <tr>
-      <th></th>
-      <td>1860422</td>
-      <td>Submitted</td>
-      <td>186022.txt</td>
-      <td>22:40 P.M</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td>1860423</td>
-      <td>Submitted</td>
-      <td>1860423.txt</td>
-      <td>16:50 P.M</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td>1860424</td>
-      <td>Submitted</td>
-      <td>186044.txt</td>
-      <td>23.50 P.M</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td>1860425</td>
-      <td>Submitted</td>
-      <td>186025.txt</td>
-      <td>21:40 P.M</td>
-    </tr>
-    <tr>
-      <th></th>
-      <td>1860426</td>
-      <td>Submitted</td>
-      <td>186046.txt</td>
-      <td>22:48 P.M</td>
-    </tr>
+<?
+  }
+}
+else{
+  echo "No Records Found"; 
+}    
+?>
   </table><br>
   <form class="" action="../tpanel.html" method="post">
     <input type="submit" class="continue" value="Go Back">

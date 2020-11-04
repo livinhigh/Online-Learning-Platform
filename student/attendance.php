@@ -91,43 +91,27 @@
           <th>CONDUCTED</th>
           <th>%</th>
         </tr>
-        <tr>
-          <td>COMPUTER ORIENTED NUMERICAL ANALYSIS</td>
-          <td>44</td>
-          <td>47</td>
-          <td>93.62</td>
-        </tr>
-        <tr>
-          <td>FORMAL LANGUAGE AND Automata Theory</td>
-          <td>32</td>
-          <td>32</td>
-          <td>100</td>
-        </tr>
-        <tr>
-          <td>Internet of Things</td>
-          <td>2</td>
-          <td>2</td>
-          <td>100</td>
-        </tr>
-        <tr>
-          <td>Design and Analysis of Algorithms</td>
-          <td>1</td>
-          <td>2</td>
-          <td>50</td>
-        </tr>
-        <tr>
-          <td>SOFTWARE ENGINEERING</td>
-          <td>43</td>
-          <td>43</td>
-          <td>100</td>
-        </tr>
-        <tr>
-          <td>INTERNET AND WEB PROGRAMMING</td>
-          <td>47</td>
-          <td>47</td>
-          <td>100</td>
-        </tr>
-      </table><br><br>
+        <?php
+
+          session_start();
+          $conn = mysqli_connect("localhost", "root", "", "company");
+          // Check connection
+          if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+          }
+          $sql = "SELECT subjectname, present, conducted, percent FROM attendance WHERE studentid = '$_SESSION['login_user']";
+          $result = $conn->query($sql);
+          if ($result->num_rows > 0) {
+          // output data of each row
+          while($row = $result->fetch_assoc()) {
+          echo "<tr><td>" . $row["subjectname"]. "</td><td>" . $row["present"] . "</td><td>" . $row["conducted"] . "</td><td>" . $row["percentage"] . "</td><td>"
+          . $row["password"]. "</td></tr>";
+          }
+          echo "</table>";
+          } else { echo "0 results"; }
+          $conn->close();
+        ?>
+        </table><br><br>
       <div class="subheading">
         TOTAL : 97.73%
       </div><br><br><form class="" action="spanel.html" method="post">

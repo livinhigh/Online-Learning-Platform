@@ -35,7 +35,7 @@
 </td>
 <?php
 session_start();
-echo "<td class=\"welcome\"><h1>HELLO ".$_SESSION['name']."</h1><h2>1860437</h2> </td>";
+echo "<td class=\"welcome\"><h1>HELLO ".$_SESSION['name']."</h1><h2>".$_SESSION['login_user']"</h2> </td>";
 ?>
       </tr>
 

@@ -82,15 +82,25 @@
       </div>
     <div class="area"><br>
       <h4 style="font-size:40px;">ASSIGNMENTS</h4>
-      <select class="" name="">
+      <form>
+      <select class="" name="" id="submit">
 
-        <option value="">Software Engineering</option>
-        <option value="">CONA</option>
-        <option value="">IWP</option>
-        <option value="">DAA</option>
-        <option value="">FLAT</option>
-        <option value="">IOT</option>
-      </select><br><br><br>
+        <option value="SE">Software Engineering</option>
+        <option value="CONA">CONA</option>
+        <option value="IWP">IWP</option>
+        <option value="DAA">DAA</option>
+        <option value="FLAT">FLAT</option>
+        <option value="IOT">IOT</option>
+        <input type="submit" method="get">
+      </select>
+      </form>
+
+      <?php 
+        session_start();
+        $_SESSION["subject"] = $_GET["submit"]      
+      
+      ?>
+      <br><br><br>
       <a class="circleContine" href="assignments.html"> >   </a>
       <div class="spacer">
 

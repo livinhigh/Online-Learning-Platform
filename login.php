@@ -39,6 +39,7 @@
           header("location: student/spanel.php");
        }
        elseif ($type=="teacher") {
+        $_SESSION['login_user'] = $myusername;
          header("location: teacher/tpanel.php");
        }else {
           $error = "Your Login Name or Password is invalid";
