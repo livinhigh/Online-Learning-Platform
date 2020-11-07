@@ -35,7 +35,7 @@
 </td>
 <?php
 session_start();
-echo "<td class=\"welcome\"><h1>HELLO ".$_SESSION['name']."</h1><h2>".$_SESSION['login_user']"</h2> </td>";
+echo "<td class=\"welcome\"><h1>HELLO ".$_SESSION['name']."</h1><h2>".$_SESSION['login_user']."</h2> </td>";
 ?>
       </tr>
 
@@ -46,7 +46,12 @@ echo "<td class=\"welcome\"><h1>HELLO ".$_SESSION['name']."</h1><h2>".$_SESSION[
         <hr>
         <div class="spacer">
           <table>
-            <tr>
+          <?php
+            include 'studentConnection.php';
+            getClass
+          ?>
+
+            <!--<tr>
               <td>Software Engineering</td>
               <td><a href="wall.html">
 
@@ -76,7 +81,7 @@ echo "<td class=\"welcome\"><h1>HELLO ".$_SESSION['name']."</h1><h2>".$_SESSION[
             <tr>
               <td>Honors</td>
               <td><img class="lefticon" src="../icons/next.png" alt=""> </td>
-            </tr>
+            </tr>-->
 
           </table>
         </div>

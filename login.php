@@ -10,14 +10,7 @@
     <center>
     <h1>Login</h1>
   <?php
-
-    define('DB_SERVER', 'sql302.epizy.com');
-    define('DB_USERNAME', 'epiz_27033647');
-    define('DB_PASSWORD', 'h0yFaudpMitWHn');
-    session_start();
-    $databasename='epiz_27033647_'.$_SESSION['college'];
-    define('DB_DATABASE', $databasename);
-    $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+include 'connection.php';
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
        // username and password sent from form
@@ -30,7 +23,7 @@
        $row = mysqli_fetch_array($result);
        $type = $row['type'];
        $_SESSION['type'] = $type;
-       $_SESSION['name'] = $row['name'];;
+       $_SESSION['name'] = $row['name'];
        $_SESSION['login_user'] = $myusername;
        // If result matched $myusername and $mypassword, table row must be 1 row
 
@@ -42,7 +35,7 @@
         $_SESSION['login_user'] = $myusername;
          header("location: teacher/tpanel.php");
        }else {
-          $error = "Your Login Name or Password is invalid";
+          echo "Your Login Name or Password is invalid";
        }
     }
 
