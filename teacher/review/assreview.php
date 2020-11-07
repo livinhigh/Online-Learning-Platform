@@ -28,40 +28,25 @@
 
 </div>
 </div>
-<div class="spacer2">
-  
-  <?php
-   
-   /* Attempt MySQL server connection. Assuming you are running MySQL
-   server with default setting (user 'root' with no password) */
-   $link = mysqli_connect('sql302.epizy.com', 'epiz_27033647', 'h0yFaudpMitWHn', 'epiz_27033647_olp');
-    
-   // Check connection
-   if($link === false){
-       die("ERROR: Could not connect. " . mysqli_connect_error());
-   }
-   
-
-    $query = "SELECT * FROM submission";
-    $query_run = mysqli_query($link, $query);
-    $check_rest =mysqli_num_rows($query_run) > 0;
-   
-    if($check_rest)
-    {
-       while($row = mysqli_fetch_assoc( $query_run))
-       {  $reg_id = .$row["Reg_id"];
-          $status = .$row["status"];
-          $upload = .$row["upload"];
-          $time = .$row["time"];
+<?php
+include 'teacherConnection.php';
 
 ?>
-
-</div>
 <div class="area">
   <br>
   <div class="heading">
     <h2>SUBMISSIONS<h2>
   </div>
+  <form method="post">
+  <select name="assselect">
+  <?php
+  session_start();
+  $subid=$_SESSION['subject'];
+  listAssignmentbysubjectid($subid);
+  ?>
+  </select>
+  <input type="submit" name="assselectButton" value="Get Submissions"/>
+  </form>
   <table class="timetable">
     <tr>
       <th></th>
@@ -70,22 +55,15 @@
       <td><h4>UPLOAD</h4></td>
       <td><h4>TIME</h4></td>
     </tr>
-    <tr>
-      <th></th>
-      <td><?php echo $reg_id;?></td>
-      <td><?php echo $status;?></td>
-      <td><?php echo $upload;?></td>
-      <td><?php echo $time;?></td>
-    </tr>
-<?
-  }
-}
-else{
-  echo "No Records Found"; 
-}    
-?>
+    <?php
+    session_start();
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+      $assid=$_POST['assselect'];
+      listSubmissionsbyassignmentid($assid);
+    }
+    ?>
   </table><br>
-  <form class="" action="../tpanel.html" method="post">
+  <form class="" action="../tpanel.php" method="post">
     <input type="submit" class="continue" value="Go Back">
   </form><br>
 </div>

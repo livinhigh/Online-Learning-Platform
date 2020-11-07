@@ -41,6 +41,9 @@ if ($_SESSION['type']=="student") {
   header("location: ../student/spanel.php");
 }
 elseif ($_SESSION['type']=="teacher") {
+  if(!isset($_SESSION['subject'])){
+    header("location: selectclass.php");
+  }
   // code...
 }
 else {
@@ -67,7 +70,7 @@ echo "<td class=\"welcome\"<h2 style=\"text-align: justify; font-size: 35px\">PR
                 <div class="dropdown">
                   <img class="lefticon" src="../icons/next.png" alt="">
                   <div class="dropdown-content">
-                    <a href="assignments/createassgnmt.html">CREATE</a>
+                    <a href="assignments/createassgnmt.php">CREATE</a>
                     <a href="#">EDIT</a>
                     <a href="#">DELETE</a>
                   </td>
@@ -80,7 +83,7 @@ echo "<td class=\"welcome\"<h2 style=\"text-align: justify; font-size: 35px\">PR
               <td><div class="dropdown">
                 <img class="lefticon" src="../icons/next.png" alt="">
                 <div class="dropdown-content">
-                  <a href="review/assreview.html">ASSIGNMENTS</a>
+                  <a href="review/assreview.php">ASSIGNMENTS</a>
                   <a href="review/stdreview.html">STUDENTS</a>
                  </td>
             </tr>
@@ -108,6 +111,15 @@ echo "<td class=\"welcome\"<h2 style=\"text-align: justify; font-size: 35px\">PR
                     <a href="#">ADD STUDENT</a>
                     <a href="#">ADD SECTION</a>
                   </td>
+            </tr>
+            <tr>
+              <td>
+                  <button class="dropbtn">SELECT ANOTHER CLASS</button>
+                </td>
+              <td>
+              <a href="selectclass.php">
+
+<img class="lefticon" src="../icons/next.png" alt=""></a>
             </tr>
 
           </table>

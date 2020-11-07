@@ -8,40 +8,6 @@
   </head>
   <body>
 
-    <?php
-
-   /* Attempt MySQL server connection. Assuming you are running MySQL
-   server with default setting (user 'root' with no password) */
-   $link = mysqli_connect('sql302.epizy.com', 'epiz_27033647', 'h0yFaudpMitWHn', 'epiz_27033647_olp');
-    
-   // Check connection
-   if($link === false){
-       die("ERROR: Could not connect. " . mysqli_connect_error());
-   }
-   $query = $conn->prepare("INSERT INTO  assignments (title, subjectcode, duedate, asstype, note)
-     VALUES (?,?,?,?,?)");
-     $query->bind_param("sssss", $title, $subjectcode, $asgndate, $duedate, $asstype, $note)
-
-     if ( isset( $_POST['submit'] ) ) {            
-      $title = $_REQUEST['title'];
-      $subjectcode = $_REQUEST['subjectcode'];
-      $asgndate = $_REQUEST['asgndate'];
-      $duedate = $_REQUEST['duedate'];
-      $asstype = $_REQUEST['asstype'];
-      $note = $_REQUEST['note'];
-     }
-     $query->execute();
-
-    $query_run = mysqli_query($link, $query);
-    $check_rest =mysqli_num_rows($query_run) > 0;
-    if ($link->query($query) === TRUE) {
-      echo "New record created successfully";
-    } else {
-      echo "Error: " . $query . "<br>" . $link->error;
-    }
-    $link->close();
-    ?>
-
   <div>
     <div class="topnav" id="myTopnav">
       <div class="title">
@@ -58,39 +24,38 @@
     <div class="spacer">
 
     </div>
-    <form action>
+    <form method="post">
     <ul class="form-style-1">
-        <li><label>TITLE<span class="required">*</span></label><input type="text" name="title" class="field-divided"></li>
-        <li><label>SUBJECT CODE<span class="required">*</span></label><input type="date" name="subjectcode"/></label>
-
-          </select>
-        </li>
         <li>
             <label>ASSIGNED DATE<span class="required">*</span></label>
-            <input type="date" name="asgndate"/>
+            <input type="date" name="asgndate" required>
             <label>SUBMISSION DATE<span class="required">*</span></label>
-            <input type="date" name="duedate">
+            <input type="date" name="duedate" required>
         </li>
         <li>
-            <label>ASSIGNMENT TYPE</label>
-            <select name="asstype" class="field-select">
-            <option value="CIA COMPONENT">CIA COMPONENT</option>
-            <option value="ASYNCHRONOUS">ASYNCHRONOUS</option>
-            <option value="WORKOUT PROBLEMS">WORKOUT PROBLEMS</option>
-            </select>
-        </li>
-        <li>
-            <label>TEACHER'S NOTE</label>
-            <textarea name="note" id="field5" class="field-long field-textarea"></textarea>
+            <label>CONTENT</label>
+            <textarea name="note" id="field5" class="field-long field-textarea" required></textarea>
         </li>
         <li>
             <input class="button" type="submit" name="submit" position="justify" value="CREATE" />
         </li>
 
     </ul>
+    </form>
+    <?php
+    include 'functions.php';
+    if($_SERVER['REQUEST_METHOD']=='POST'){
+      session_start();
+      $asigndate=$end = date("Y-m-d", strtotime($_POST['asgndate']));
+      $duedate= date("Y-m-d", strtotime($_POST['duedate']));
+      $note=$_POST['note'];
+      $subid=$_SESSION['subject'];
+      createAssignment($asigndate,$duedate,$note,$subid);
+    }
+    ?>
     <div class="spacer">
     </div>
-    </form>
+    
 
   </section>
 
