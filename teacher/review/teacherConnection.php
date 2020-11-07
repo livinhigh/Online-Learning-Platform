@@ -1,6 +1,6 @@
 <?php
  
- function getListofClassbyRegID($regid){//for dropdown in selectclass.php
+   function getListofClassbyRegID($regid){//for dropdown in selectclass.php
     define('DB_SERVER', 'sql302.epizy.com');
     define('DB_USERNAME', 'epiz_27033647');
     define('DB_PASSWORD', 'h0yFaudpMitWHn');

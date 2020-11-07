@@ -71,8 +71,8 @@ echo "<td class=\"welcome\"<h2 style=\"text-align: justify; font-size: 35px\">PR
                   <img class="lefticon" src="../icons/next.png" alt="">
                   <div class="dropdown-content">
                     <a href="assignments/createassgnmt.php">CREATE</a>
-                    <a href="#">EDIT</a>
-                    <a href="#">DELETE</a>
+                    <a href="assignments/editassignment.php">EDIT</a>
+                    <a href="assignments/deleteassignment.php">DELETE</a>
                   </td>
             </tr>
 
@@ -102,7 +102,7 @@ echo "<td class=\"welcome\"<h2 style=\"text-align: justify; font-size: 35px\">PR
 
             <tr>
               <td>
-                  <button class="dropbtn">EDIT CLASS</button>
+                  <button class="dropbtn">MODIFY CLASS</button>
                 </td>
               <td>
                 <div class="dropdown">
@@ -110,6 +110,7 @@ echo "<td class=\"welcome\"<h2 style=\"text-align: justify; font-size: 35px\">PR
                   <div class="dropdown-content">
                     <a href="#">ADD STUDENT</a>
                     <a href="#">ADD SECTION</a>
+                    <a href="#">DELETE CLASS</a>
                   </td>
             </tr>
             <tr>
