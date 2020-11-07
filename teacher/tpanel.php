@@ -108,9 +108,8 @@ echo "<td class=\"welcome\"<h2 style=\"text-align: justify; font-size: 35px\">PR
                 <div class="dropdown">
                   <img class="lefticon" src="../icons/next.png" alt="">
                   <div class="dropdown-content">
-                    <a href="#">ADD STUDENT</a>
-                    <a href="#">ADD SECTION</a>
-                    <a href="#">DELETE CLASS</a>
+                    <a href="edit/addstudent.php">ADD STUDENT</a>
+                    <a href="edit/deleteclass.php">DELETE CLASS</a>
                   </td>
             </tr>
             <tr>
