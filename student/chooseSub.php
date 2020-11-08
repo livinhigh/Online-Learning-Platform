@@ -84,14 +84,13 @@
       <h4 style="font-size:40px;">ASSIGNMENTS</h4>
       <form>
       <select class="" name="" id="submit">
-
-        <option value="SE">Software Engineering</option>
-        <option value="CONA">CONA</option>
-        <option value="IWP">IWP</option>
-        <option value="DAA">DAA</option>
-        <option value="FLAT">FLAT</option>
-        <option value="IOT">IOT</option>
-        <input type="submit" method="get">
+        <?php
+        session_start();
+        include'studentConnection.php';
+        getsubjectlistbyregid($_SESSION['login_user']);
+        ?>
+      
+        <input type="submit" method="post">
       </select>
       </form>
 

@@ -89,7 +89,7 @@ echo "<td class=\"welcome\"><h1>HELLO ".$_SESSION['name']."</h1><h2>".$_SESSION[
       </div>
     <div class="area">
       <div class="spacer"></div>
-      <a class="button" href="chooseSub.html">
+      <a class="button" href="chooseSub.php">
         <img class="button" src="../buttons/class.png" alt=""><h4>Assignments</h4>
       </a>
       <a class="button" href="attendance.html">
